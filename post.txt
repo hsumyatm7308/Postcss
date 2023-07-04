@@ -1,0 +1,82 @@
+[In reply to Aitch]
+https://tailwindcss.com
+
+Integrate Methods
+1.Using CDN Link ( Content Deliver Network )
+2.Using Tailwind CLI
+3.Using PostCSS
+
+
+
+
+
+CDN
+
+.text-primary{
+ color: blue;
+}
+
+.text-danger{
+ color: red;
+}
+
+.textsuccess{
+ color: green;
+}
+
+project
+<p>baby lwann tl</p>
+
+
+Terminal = VS Code
+
+For Linux 
+sudo apt update
+sudo apt upgrade
+sudo apt install nodejs
+node -v
+
+For Window
+
+
+1.Using CDN Link ( Content Deliver Network )
+<script src="https://cdn.tailwindcss.com"></script>
+
+3.Using PostCSS
+=open folder "usingpostcss"
+=open terminal
+npm install -D tailwindcss postcss autoprefixer
+=>Create tailwind.comfit file
+npx tailwindcss init
+
+=>Add PostCSS file
+=go to tailwind.config.js
+=and write down in content:["./public/**/*.html"]
+
+. = current folder
+** = all folder of inside in public folder
+*.html = all html folders
+
+
+=>Create Tailwind main files
+=create new folder and naming "tailwind"
+=create new folder and naming "main.css" in "tailwind" folder
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+=>Build Process
+=write down "npm init - y" in terminal (so it will create package.json)
+npx tailwindcss -i./src/input.css-o./dist/output.css--watch
+=write down in package.json > "script":{
+ "test": "echo \"Error: no test specified\" && exit 1",
+ "build": "tailwindcss -i ./tailwind/main.css -o ./public/tailwind.css"
+"watch":
+
+-i = install
+-o = open
+
+=go to terminal and enter "npm run build"
